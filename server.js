@@ -8,7 +8,7 @@ app.use(express.json());
 // Company location (fixed)
 const COMPANY_LAT = 30.5606667;
 const COMPANY_LNG = 31.0100556;
-const GEOFENCE_RADIUS = 50.0; // meters
+const GEOFENCE_RADIUS = 10.0; // meters
 
 // Haversine distance (meters)
 function distanceMeters(lat1, lon1, lat2, lon2) {
@@ -79,6 +79,6 @@ app.post("/api/attendance/checkin", (req, res) => {
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
 
